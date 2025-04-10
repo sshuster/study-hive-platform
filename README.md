@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
 
-## Project info
+# StudyHive - Multi-subject Tutoring Platform
 
-**URL**: https://lovable.dev/projects/8d1af2a9-188c-4a89-80ec-dc9edfac5e92
+A comprehensive tutoring and question answering platform for students to get help with homework and prepare for exams.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- User authentication (login, register, logout)
+- Role-based dashboards (student and admin)
+- Question submission and tracking
+- Performance visualization with charts
+- Administrator user management
+- Multi-subject tutoring support
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8d1af2a9-188c-4a89-80ec-dc9edfac5e92) and start prompting.
+### Frontend
+- React 18
+- TypeScript
+- TailwindCSS for styling
+- Shadcn UI components
+- Recharts for data visualization
+- React Router for navigation
+- React Query for data fetching
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
+- Flask (Python)
+- SQLite database
+- RESTful API endpoints
 
-**Use your preferred IDE**
+## Demo Accounts
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+For testing purposes, you can use these pre-configured accounts:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Student Account:**
+  - Username: muser
+  - Password: muser
 
-Follow these steps:
+- **Admin Account:**
+  - Username: mvc
+  - Password: mvc
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Running the Application
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Frontend
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Backend
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Navigate to backend directory
+cd backend
 
-**Use GitHub Codespaces**
+# Install dependencies
+pip install -r requirements.txt
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Start Flask server
+python app.py
+```
 
-## What technologies are used for this project?
+The frontend will be available at http://localhost:8080
+The backend API will be available at http://localhost:5000
 
-This project is built with:
+## Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- `/src` - React frontend code
+  - `/components` - Reusable UI components
+  - `/contexts` - React context providers
+  - `/pages` - Main application pages
+  - `/services` - API and data services
 
-## How can I deploy this project?
+- `/backend` - Flask backend code
+  - `app.py` - Main Flask application
+  - `schema.sql` - Database schema
+  - `requirements.txt` - Python dependencies
 
-Simply open [Lovable](https://lovable.dev/projects/8d1af2a9-188c-4a89-80ec-dc9edfac5e92) and click on Share -> Publish.
+## API Endpoints
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- `/api/login` - User authentication
+- `/api/register` - New user registration
+- `/api/users` - User management (admin only)
+- `/api/questions` - Question submission and retrieval
+- `/api/subjects` - Subject listing
